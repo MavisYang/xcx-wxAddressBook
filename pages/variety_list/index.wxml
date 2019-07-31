@@ -1,0 +1,47 @@
+<!--pages/variety-book/index.wxml-->
+<view class="log-list">
+  <view class="top_view">
+    <view class="search_box">
+      <!-- <input class="" value="" type="text|number|idcard|digit|time|date" password="false" placeholder="" placeholder-style="" placeholder-class="input-placeholder" 
+        disabled="false" maxlength="140" focus="false" bindinput="" bindfocus="" bindblur="" bindconfirm=""> -->
+        
+      </input>
+      <input class="search_ipt" value="" type="text"
+        placeholder="可以搜素猫咪品种的～" 
+        placeholder-class="" 
+        bindinput="filterSearch"
+        bindfocus=""
+       >
+      </input>
+    </view>
+
+  <view class="hot_box">
+      <view class="hot_box_title">热门品种</view>
+      <view class="hot_box_cat">
+        <text wx:for="{{hotData}}" wx:key='{{index}}' data-name='{{item.name}}' bindtap='changeCat' class="hot_text {{selectCat==item.name?'active':''}}"> {{item.name}} </text>
+      </view>
+    </view>
+  </view>
+
+
+  <scroll-view class='scroll_view' 
+  style='height: {{scrollHeight!=0?scrollHeight:"calc(100% - 500rpx -26rpx)"}};'
+  scroll-y  scroll-into-view="{{toView}}" enable-back-to-top bindscroll="scroll" scroll-with-animation scroll-top="{{scrollTop}}">
+    <view class="list-group" wx:for="{{logs}}" wx:for-item="group">
+      <view class="title" id="{{group.title}}">{{group.title}}</view>
+      <block wx:for="{{group.items}}" wx:key='{{index}}' wx:for-item="user">
+        <view class="list-group-item" data-name='{{user.name}}' bindtap='changeCat'>
+          {{user.name}}
+        </view>
+      </block>
+    </view>
+  </scroll-view>
+  <!-- 侧边字母导航 -->
+  <view class="list-shortcut">
+    <block wx:for="{{logs}}" wx:key='{{index}}'>
+      <text class="{{currentIndex===index?'current':''}}" data-id="{{item.title}}" bindtap='scrollToview'>
+        {{item.title}}
+      </text>
+    </block>
+  </view>
+</view>
