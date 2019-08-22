@@ -1,5 +1,5 @@
 <!--index.wxml-->
-<!-- <view class="container">
+<view class="container">
   <view class="userinfo">
     <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
     <block wx:else>
@@ -7,9 +7,54 @@
       <text class="userinfo-nickname">{{userInfo.nickName}}</text>
     </block>
   </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
-  </view>
-</view> -->
+</view>
 
-<wxAddress-book></wxAddress-book>
+<view>
+  <button class="default" bindtap="add_text" class="red" size="default" type="default" plain="default" >
+    添加文本:rich-text
+  </button>
+  <rich-text class="" nodes="{{text}}"> </rich-text>
+</view>
+
+<!-- 基本内容 -->
+<view class="" hover-class="none" hover-stop-propagation="false">
+  <view class="" hover-class="none" hover-stop-propagation="false">
+    基本内容:
+  </view>
+
+  <icon class="" type="success" size="23" color=""> </icon>
+  <icon class="" type="success_no_circle" size="23" color=""> </icon>
+  <icon class="" type="info" size="23" color=""> </icon>
+  <icon class="" type="warn" size="23" color=""> </icon>
+  <icon class="" type="waiting" size="23" color=""> </icon>
+  <icon class="" type="cancel" size="23" color=""> </icon>
+  <icon class="" type="download" size="23" color=""> </icon>
+  <icon class="" type="search" size="23" color=""> </icon>
+  <icon class="" type="clear" size="23" color=""> </icon>
+
+  <rich-text class="" nodes="{{nodes}}">
+    
+  </rich-text>
+
+</view>
+
+<view>表单组件:</view>
+<view>
+  <editor 
+  id="editor"
+  class="ql-container"
+  placeholder="{{placeholder}}"
+  showImgSize
+  showImgToolbar
+  showImgResize
+  bindstatuschange="onStatusChange"
+  read-only="{{readOnly}}"
+  bindready="onEditorReady"
+  ></editor>
+  
+
+</view>
+
+
+
+

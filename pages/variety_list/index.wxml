@@ -3,9 +3,10 @@
   <view class="top_view">
     <view class="search_box">
       <!-- <input class="" value="" type="text|number|idcard|digit|time|date" password="false" placeholder="" placeholder-style="" placeholder-class="input-placeholder" 
-        disabled="false" maxlength="140" focus="false" bindinput="" bindfocus="" bindblur="" bindconfirm=""> -->
+        disabled="false" maxlength="140" focus="false" bindinput="" bindfocus="" bindblur="" bindconfirm=""> 
         
       </input>
+      -->
       <input class="search_ipt" value="" type="text"
         placeholder="可以搜素猫咪品种的～" 
         placeholder-class="" 

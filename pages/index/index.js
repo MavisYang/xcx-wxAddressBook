@@ -7,7 +7,26 @@ Page({
     motto: 'Hello World',
     userInfo: {},
     hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo')
+    canIUse: wx.canIUse('button.open-type.getUserInfo'),
+    nodes:[
+      {
+        name:'div',
+        attrs:{
+          class:'div_class',
+          style:'color:red;'
+        },
+        children:[
+          {
+            type: 'text',
+            text: 'hello word 1 ',
+          },
+          {
+            type:'text',
+            text:'hello word'
+          }
+        ]
+      }
+    ]
   },
   //事件处理函数
   bindViewTap: function() {
@@ -49,6 +68,11 @@ Page({
     this.setData({
       userInfo: e.detail.userInfo,
       hasUserInfo: true
+    })
+  },
+  add_text:function(){
+    this.setData({
+      text: "<div>猫猫<span style='color:#3CCB9B'>我是添加的内容</span>叫</div>"
     })
   }
 })

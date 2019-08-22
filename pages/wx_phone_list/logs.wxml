@@ -14,7 +14,7 @@
   <!-- 侧边字母导航 -->
   <view class="list-shortcut">
     <block wx:for="{{logs}}" wx:key='{{index}}'>
-      <text class="{{currentIndex===index?'current':''}}" data-id="{{item.title}}" bindtap='scrollToview'>
+      <text class="{{currentIndex==index?'current':''}}" data-id="{{item.title}}" bindtap='scrollToview'>
         {{item.title}}
       </text>
     </block>

@@ -12,7 +12,7 @@
 		"autoAudits": false
 	},
 	"compileType": "miniprogram",
-	"libVersion": "2.7.7",
+	"libVersion": "2.8.0",
 	"appid": "wx50d128239e413fe0",
 	"projectname": "wxAddressBook",
 	"debugOptions": {
@@ -39,7 +39,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 1,
+			"current": 2,
 			"list": [
 				{
 					"id": -1,
@@ -52,6 +52,13 @@
 					"id": -1,
 					"name": "variety_list",
 					"pathName": "pages/variety_list/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "variety_list_2",
+					"pathName": "pages/variety_list_2/index",
 					"scene": null
 				}
 			]

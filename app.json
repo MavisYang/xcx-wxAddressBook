@@ -3,7 +3,8 @@
     "pages/index/index",
     "pages/logs/logs",
     "pages/wx_phone_list/logs",
-    "pages/variety_list/index"
+    "pages/variety_list/index",
+    "pages/variety_list_2/index"
   ],
   "window": {
     "backgroundTextStyle": "light",
